@@ -82,10 +82,10 @@ export function Navbar() {
             {/* ── Logo ─────────────────────────────────────────────────── */}
             <a
               href="#"
-              className="relative text-base font-bold tracking-tight hover:opacity-70 transition-opacity shrink-0"
+              className="relative hover:opacity-80 transition-opacity shrink-0"
+              aria-label="Home"
             >
-              AC
-              <span className="text-muted-foreground font-normal">.</span>
+              <img src="/logo.png" alt="HB Logo" className="h-7 w-auto object-contain rounded" />
             </a>
 
             {/* ── Desktop links ────────────────────────────────────────── */}
@@ -185,9 +185,7 @@ export function Navbar() {
         <div className="flex flex-col h-full">
           {/* Drawer header */}
           <div className="flex items-center justify-between px-6 h-16 border-b border-border">
-            <span className="text-base font-bold tracking-tight">
-              AC<span className="text-muted-foreground font-normal">.</span>
-            </span>
+            <img src="/logo.png" alt="HB Logo" className="h-7 w-auto object-contain rounded" />
             <button
               onClick={() => setIsMobileMenuOpen(false)}
               className="h-9 w-9 flex items-center justify-center rounded-xl hover:bg-muted transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
