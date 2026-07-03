@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 
@@ -10,6 +10,15 @@ const Contact = lazy(() => import("@/components/Contact").then((m) => ({ default
 const Footer = lazy(() => import("@/components/Footer").then((m) => ({ default: m.Footer })));
 
 export default function App() {
+  useEffect(() => {
+    // Prevent browser from remembering scroll position
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    // Scroll to top on mount
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

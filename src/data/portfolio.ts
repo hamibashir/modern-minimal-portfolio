@@ -1,13 +1,12 @@
 export const personalInfo = {
-  name: "Alex Chen",
+  name: "Hamza Bashir",
   title: "Software Engineer",
   tagline: "Building digital experiences across platforms",
-  bio: "I'm a full-stack software engineer with 6+ years of experience crafting elegant solutions across mobile, web, and backend domains. I love transforming complex problems into clean, intuitive applications.",
-  location: "San Francisco, CA",
-  email: "alex@example.com",
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  twitter: "https://twitter.com",
+  bio: "I'm a full-stack software engineer with 2+ years of experience crafting elegant solutions across mobile, web, and backend domains. I love transforming complex problems into clean, intuitive applications.",
+  location: "Islamabad, Pakistan",
+  email: "hamzabashir1289@gmail.com",
+  github: "https://github.com/hamibashir",
+  linkedin: "https://linkedin.com/in/hamza-bashir04",
 };
 
 export interface SkillItem {
@@ -91,6 +90,7 @@ export interface Project {
   category: string[];
   link?: string;
   github?: string;
+  playStore?: string;
   featured: boolean;
   emoji: string;
   accent: string;
@@ -98,6 +98,42 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    title: "Ahsan Rashid Portfolio",
+    description: "Professional portfolio website for Ahsan Rashid.",
+    longDescription: "A fully responsive frontend portfolio website.",
+    tech: ["Web Development", "Frontend"],
+    category: ["Frontend"],
+    link: "https://ahsanrashid.vercel.app/",
+    featured: true,
+    emoji: "👨‍💻",
+    accent: "from-indigo-500/15 to-blue-500/5",
+    year: "2026",
+  },
+  {
+    title: "The Sescon (Pvt) Ltd",
+    description: "Professional web development for The Sescon (Pvt) Ltd.",
+    longDescription: "A frontend website built for The Sescon.",
+    tech: ["Web Development", "Frontend"],
+    category: ["Frontend"],
+    link: "https://thesescon.com/",
+    featured: true,
+    emoji: "🌐",
+    accent: "from-blue-500/15 to-cyan-500/5",
+    year: "2024",
+  },
+  {
+    title: "SA Constructions",
+    description: "Professional web development for SA Constructions.",
+    longDescription: "A frontend website built for SA Constructions.",
+    tech: ["Web Development", "Frontend"],
+    category: ["Frontend"],
+    link: "https://saconstructions.pro/",
+    featured: true,
+    emoji: "🏗️",
+    accent: "from-yellow-500/15 to-orange-500/5",
+    year: "2025",
+  },
   {
     title: "Smart Agriculture",
     description: "AI Powered Smart Agriculture System for Pakistani Farmers",
@@ -108,43 +144,46 @@ export const projects: Project[] = [
     featured: true,
     emoji: "🌾",
     accent: "from-green-500/15 to-emerald-500/5",
-    year: "2024",
+    year: "2026",
   },
   {
-    title: "arrows puzzle",
+    title: "Arrows Puzzle",
     description: "A Javascript-based game wrapped with Capacitor into a native mobile app.",
     longDescription: "View the repository on GitHub for more details.",
     tech: ["JavaScript", "Capacitor"],
-    category: ["App Development", "Frontend"],
+    category: ["App Development"],
     github: "https://github.com/hamibashir/arrows-puzzle",
+    playStore: "https://play.google.com/store/apps/details?id=com.apexbytelabs.arrows",
     featured: false,
     emoji: "🧩",
     accent: "from-orange-500/15 to-amber-500/5",
-    year: "2024",
+    year: "2026",
   },
   {
-    title: "Qalb",
-    description: "Full Stack web application.",
-    longDescription: "View the repository on GitHub for more details.",
-    tech: ["PHP"],
-    category: ["Full Stack"],
+    title: "Qalb: Islamic Advisor",
+    description: "A comprehensive Islamic advising mobile application with a dedicated admin panel.",
+    longDescription: "A full-stack mobile ecosystem featuring a native Android app built with Flutter, a robust PHP backend, and an intuitive Vue.js admin panel.",
+    tech: ["Flutter", "PHP", "Vue.js", "Android"],
+    category: ["App Development", "Full Stack"],
     github: "https://github.com/hamibashir/Qalb",
+    playStore: "https://play.google.com/store/apps/details?id=com.apexbytelabs.qalb",
     featured: false,
     emoji: "❤️",
     accent: "from-rose-500/15 to-pink-500/5",
-    year: "2024",
+    year: "2026",
   },
   {
-    title: "apexbyte labs",
+    title: "Apexbyte Labs",
     description: "Frontend web development project.",
     longDescription: "View the repository on GitHub for more details.",
     tech: ["TypeScript"],
     category: ["Frontend"],
     github: "https://github.com/hamibashir/apexbyte-labs",
+    link: "https://apexbytelabs.online/",
     featured: false,
     emoji: "🧪",
     accent: "from-blue-500/15 to-cyan-500/5",
-    year: "2024",
+    year: "2026",
   },
   {
     title: "Email Spam Classifier",
@@ -156,10 +195,10 @@ export const projects: Project[] = [
     featured: false,
     emoji: "📧",
     accent: "from-red-500/15 to-rose-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
-    title: "loan manager",
+    title: "Loan Manager",
     description: "Mobile application for managing loans.",
     longDescription: "View the repository on GitHub for more details.",
     tech: ["Dart", "Flutter"],
@@ -168,10 +207,10 @@ export const projects: Project[] = [
     featured: false,
     emoji: "💸",
     accent: "from-emerald-500/15 to-teal-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
-    title: "POS Software",
+    title: "POS Software & Online Store",
     description: "Point of Sale software system.",
     longDescription: "View the repository on GitHub for more details.",
     tech: ["Blade", "Laravel"],
@@ -180,10 +219,10 @@ export const projects: Project[] = [
     featured: false,
     emoji: "🏪",
     accent: "from-indigo-500/15 to-blue-500/5",
-    year: "2023",
+    year: "2026",
   },
   {
-    title: "budgetsplit",
+    title: "Budget Split",
     description: "App for splitting budgets and expenses.",
     longDescription: "View the repository on GitHub for more details.",
     tech: ["Dart", "Flutter"],
@@ -192,7 +231,7 @@ export const projects: Project[] = [
     featured: false,
     emoji: "📊",
     accent: "from-sky-500/15 to-cyan-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
     title: "Driver Monitoring System",
@@ -204,7 +243,7 @@ export const projects: Project[] = [
     featured: false,
     emoji: "🚗",
     accent: "from-slate-500/15 to-gray-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
     title: "Smart Attendance System",
@@ -216,7 +255,7 @@ export const projects: Project[] = [
     featured: false,
     emoji: "📅",
     accent: "from-violet-500/15 to-purple-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
     title: "Iris Flower Classification",
@@ -228,7 +267,7 @@ export const projects: Project[] = [
     featured: false,
     emoji: "🌸",
     accent: "from-pink-500/15 to-rose-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
     title: "House Price Prediction System",
@@ -240,7 +279,7 @@ export const projects: Project[] = [
     featured: false,
     emoji: "🏠",
     accent: "from-amber-500/15 to-orange-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
     title: "Digit Recognition System",
@@ -252,7 +291,7 @@ export const projects: Project[] = [
     featured: false,
     emoji: "🔢",
     accent: "from-blue-500/15 to-indigo-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
     title: "Music Genre Classifier",
@@ -264,7 +303,7 @@ export const projects: Project[] = [
     featured: false,
     emoji: "🎵",
     accent: "from-purple-500/15 to-fuchsia-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
     title: "Mall Customer Segmentation",
@@ -276,7 +315,7 @@ export const projects: Project[] = [
     featured: false,
     emoji: "🛍️",
     accent: "from-teal-500/15 to-emerald-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
     title: "Loan Approval Prediction",
@@ -288,7 +327,7 @@ export const projects: Project[] = [
     featured: false,
     emoji: "🏦",
     accent: "from-emerald-500/15 to-green-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
     title: "Student Score Prediction",
@@ -300,7 +339,7 @@ export const projects: Project[] = [
     featured: false,
     emoji: "🎓",
     accent: "from-blue-500/15 to-cyan-500/5",
-    year: "2023",
+    year: "2025",
   },
   {
     title: "Emotion Detection System",
@@ -312,7 +351,7 @@ export const projects: Project[] = [
     featured: false,
     emoji: "😊",
     accent: "from-rose-500/15 to-red-500/5",
-    year: "2023",
+    year: "2025",
   }
 ];
 
@@ -331,116 +370,160 @@ export type TimelineCategory = "experience" | "education" | "certifications";
 // ── Experience ──────────────────────────────────────────────────────────────
 export const experiences: TimelineItem[] = [
   {
-    title: "Senior Software Engineer",
-    subtitle: "TechNova Inc.",
-    period: "2022 — Present",
-    description: "Leading cross-platform development initiatives and mentoring junior engineers.",
+    title: "MERN Stack Developer",
+    subtitle: "Veclar Technologies · Rawalpindi, Pakistan",
+    period: "Jul 2025 — Sep 2025",
+    description: "",
     details: [
-      "Architected a Flutter-based mobile platform serving 500K+ users",
-      "Reduced API response times by 40% through Laravel optimization",
-      "Established CI/CD pipelines cutting deployment time by 60%",
+      "Developed real-world projects using React (TypeScript), TailwindCSS, Bootstrap, and Shadcn UI",
+      "Built scalable backend services with Node.js, Express, PHP, and MySQL",
+      "Gained hands-on experience in MERN stack, problem-solving, and cross-functional collaboration"
     ],
-    tags: ["Flutter", "Laravel", "React", "AWS"],
+    tags: ["Node.js", "TypeScript", "React", "TailwindCSS"],
   },
   {
-    title: "Full Stack Developer",
-    subtitle: "Digital Craft Studio",
-    period: "2020 — 2022",
-    description: "Delivered end-to-end web and mobile solutions for diverse clients.",
+    title: "Machine Learning Intern",
+    subtitle: "Arch Technologies · Remote",
+    period: "Aug 2025 — Sep 2025",
+    description: "",
     details: [
-      "Built 12+ production applications across web and mobile platforms",
-      "Implemented real-time features using WebSocket and Firebase",
-      "Led migration from monolith to microservices architecture",
+      "Researched and implemented Computer Vision algorithms for image processing tasks",
+      "Developed machine learning models using Python and Scikit-Learn",
+      "Optimized data pipelines and improved model prediction accuracy"
     ],
-    tags: ["React", "Vue.js", "Node.js", "Flutter"],
+    tags: ["Scikit-Learn", "Python", "Machine Learning"],
   },
   {
-    title: "Backend Developer",
-    subtitle: "DataPulse",
-    period: "2018 — 2020",
-    description: "Developed scalable backend systems and RESTful APIs.",
+    title: "Machine Learning Intern",
+    subtitle: "Elevvo Pathways · Remote",
+    period: "Aug 2025 — Aug 2025",
+    description: "",
     details: [
-      "Designed REST APIs handling 10M+ daily requests",
-      "Built automated data processing pipelines with Python",
-      "Maintained 99.9% uptime for critical services",
+      "Designed and trained Computer Vision models for automated object detection",
+      "Utilized Python libraries for data extraction, cleaning, and preprocessing",
+      "Collaborated with team members to integrate AI solutions into applications"
     ],
-    tags: ["Laravel", "Python", "PostgreSQL", "Docker"],
+    tags: ["Computer Vision", "Python"],
+  },
+  {
+    title: "Web Developer",
+    subtitle: "SA Consulting and Structure Engineers · Islamabad, Pakistan",
+    period: "Feb 2025 — Jun 2025",
+    description: "",
+    details: [
+      "Designed and developed a dynamic, responsive WordPress website for SA Constructions",
+      "Prioritized a user-friendly interface and visually engaging layout for seamless navigation",
+      "Integrated advanced SEO techniques to boost online visibility and attract prospective clients"
+    ],
+    tags: ["Web Development", "WordPress"],
+  },
+  {
+    title: "Web Developer",
+    subtitle: "The Sescon (Pvt) Ltd · Islamabad, Pakistan",
+    period: "Aug 2024 — Sep 2024",
+    description: "",
+    details: [
+      "Developed a fully dynamic and responsive WordPress website for The Sescon (Pvt) Ltd",
+      "Focused on creating a user-friendly interface and visually appealing design",
+      "Implemented effective SEO strategies to enhance online visibility and attract potential clients"
+    ],
+    tags: ["WordPress", "SEO"],
+  },
+  {
+    title: "Community Volunteer",
+    subtitle: "Pakistan Red Crescent Society (PRCS) · Islamabad, Pakistan",
+    period: "Jul 2024 — Aug 2024",
+    description: "",
+    details: [
+      "Distributed fully equipped first aid kits to local schools and orphanages",
+      "Conducted regular training sessions to disseminate information on emergency drills",
+      "Equipped students and staff with tools to effectively respond to emergency situations"
+    ],
+    tags: ["Volunteering", "Community Service"],
+  },
+  {
+    title: "Intern",
+    subtitle: "Forage - JPMorgan Chase & Co · Remote",
+    period: "Jun 2023 — Jul 2023",
+    description: "",
+    details: [
+      "Interfaced with a stock price data feed",
+      "Used JPMorgan Chase & Co. frameworks and tools",
+      "Displayed data visually for traders"
+    ],
+    tags: ["Data Analysis", "Data Visualization"],
   },
 ];
 
 // ── Education ───────────────────────────────────────────────────────────────
 export const education: TimelineItem[] = [
   {
-    title: "M.S. Computer Science",
-    subtitle: "Stanford University",
-    period: "2016 — 2018",
-    description: "Focused on distributed systems and human-computer interaction.",
-    details: [
-      "Thesis on cross-platform rendering performance in Flutter vs React Native",
-      "Teaching assistant for Advanced Web Technologies (CS 142)",
-      "Published research on optimizing REST API latency at scale",
-    ],
-    tags: ["Distributed Systems", "HCI", "Research"],
+    title: "BS Software Engineering",
+    subtitle: "Capital University of Science & Technology (CUST)",
+    period: "Sep 2022 — Jul 2026",
+    description: "",
+    details: [],
+    tags: ["Software Engineering"],
   },
   {
-    title: "B.S. Software Engineering",
-    subtitle: "University of California, Berkeley",
-    period: "2012 — 2016",
-    description: "Graduated with honors — strong foundation in algorithms, systems, and software design.",
-    details: [
-      "Dean's List all semesters with 3.9 GPA",
-      "Led the university's open-source club and organized two hackathons",
-      "Capstone project: real-time collaborative code editor (Node.js + WebSocket)",
-    ],
-    tags: ["Algorithms", "Software Design", "Open Source"],
+    title: "Intermediate - Pre-Engineering",
+    subtitle: "Pak-Turk Maarif International Schools and Colleges",
+    period: "Sep 2020 — Jul 2022",
+    description: "",
+    details: [],
+    tags: ["Pre-Engineering"],
+  },
+  {
+    title: "Secondary School Certificate - Science",
+    subtitle: "Allied School",
+    period: "Aug 2018 — May 2020",
+    description: "",
+    details: [],
+    tags: ["Science"],
   },
 ];
 
 // ── Certifications ──────────────────────────────────────────────────────────
 export const certifications: TimelineItem[] = [
   {
-    title: "AWS Solutions Architect — Professional",
-    subtitle: "Amazon Web Services",
+    title: "Introduction to Cybersecurity Awareness",
+    subtitle: "HP LIFE",
+    period: "2025",
+    description: "",
+    details: [],
+    tags: ["Cybersecurity"],
+  },
+  {
+    title: "Foundations: Data, Data, Everywhere",
+    subtitle: "Google (Coursera)",
     period: "2024",
-    description: "Advanced certification for designing distributed systems on AWS.",
-    details: [
-      "Covers high-availability architecture, cost optimization, and migration strategies",
-      "Scored in the top 5% of candidates globally",
-    ],
-    tags: ["AWS", "Cloud Architecture", "DevOps"],
+    description: "",
+    details: [],
+    tags: ["Data Science"],
   },
   {
-    title: "Google Associate Cloud Engineer",
-    subtitle: "Google Cloud",
-    period: "2023",
-    description: "Validates ability to deploy and manage GCP applications and infrastructure.",
-    details: [
-      "Hands-on proficiency with Compute Engine, Kubernetes Engine, and Cloud Functions",
-      "Infrastructure-as-code with Terraform on GCP",
-    ],
-    tags: ["GCP", "Kubernetes", "Terraform"],
+    title: "Prepare Data for Exploration",
+    subtitle: "Google (Coursera)",
+    period: "2024",
+    description: "",
+    details: [],
+    tags: ["Data Science", "Data Exploration"],
   },
   {
-    title: "Flutter & Dart — The Complete Guide",
-    subtitle: "Udemy — Maximilian Schwarzmüller",
-    period: "2022",
-    description: "Comprehensive course covering Flutter, Dart, state management, and native device features.",
-    details: [
-      "Built 8 production-grade projects throughout the course",
-      "Mastered advanced state management with Riverpod and Bloc",
-    ],
-    tags: ["Flutter", "Dart", "Mobile"],
+    title: "C for Everyone: Programming Fundamentals",
+    subtitle: "University of California, Santa Cruz (Coursera)",
+    period: "2024",
+    description: "",
+    details: [],
+    tags: ["C", "Programming Fundamentals"],
   },
   {
-    title: "Laravel Certified Developer",
-    subtitle: "Laravel LLC",
-    period: "2021",
-    description: "Official certification demonstrating deep proficiency with the Laravel framework.",
-    details: [
-      "Expertise in Eloquent ORM, queues, events, and testing",
-      "Advanced knowledge of Laravel ecosystem (Horizon, Vapor, Forge)",
-    ],
-    tags: ["Laravel", "PHP", "Backend"],
+    title: "Coding for Everyone: C and C++ (Specialization)",
+    subtitle: "University of California, Santa Cruz (Coursera)",
+    period: "2024",
+    description: "",
+    details: [],
+    tags: ["C", "C++", "Programming"],
   },
 ];
 

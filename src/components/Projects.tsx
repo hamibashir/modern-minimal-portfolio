@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from "react";
-import { ExternalLink, ArrowUpRight, Folder } from "lucide-react";
+import { ExternalLink, ArrowUpRight, Folder, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { GithubIcon } from "@/components/icons";
@@ -65,6 +65,18 @@ const ProjectCard = React.memo(function ProjectCard({
                 <GithubIcon className="h-4 w-4" />
               </a>
             )}
+            {project.playStore && (
+              <a
+                href={project.playStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground/50 hover:text-foreground transition-colors"
+                aria-label="Play Store"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Play className="h-4 w-4 fill-current" />
+              </a>
+            )}
           </div>
         </div>
 
@@ -103,7 +115,7 @@ const ProjectCard = React.memo(function ProjectCard({
               <Badge
                 key={cat}
                 variant="outline"
-                className="text-[9px] uppercase tracking-wider font-medium truncate max-w-[100px]"
+                className="text-[9px] uppercase tracking-wider font-medium"
                 title={cat}
               >
                 {cat}

@@ -12,7 +12,7 @@ import {
   Check,
 } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "@/components/icons";
+import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { personalInfo } from "@/data/portfolio";
 import { useInView } from "@/components/useInView";
 import { cn } from "@/utils/cn";
@@ -42,19 +42,13 @@ const socials = [
     label: "GitHub",
     href: personalInfo.github,
     icon: <GithubIcon className="h-5 w-5" />,
-    handle: "@alexchen",
+    handle: "@hamibashir",
   },
   {
     label: "LinkedIn",
     href: personalInfo.linkedin,
     icon: <LinkedinIcon className="h-5 w-5" />,
-    handle: "in/alexchen",
-  },
-  {
-    label: "X / Twitter",
-    href: personalInfo.twitter,
-    icon: <TwitterIcon className="h-5 w-5" />,
-    handle: "@alexchen",
+    handle: "in/hamza-bashir04",
   },
 ];
 

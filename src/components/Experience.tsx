@@ -115,36 +115,29 @@ function TimelineEntry({
                 )}
               </div>
 
-              {item.details.length > 0 && (
-                <button
-                  onClick={() => setExpanded(!expanded)}
-                  aria-expanded={expanded}
-                  aria-label={expanded ? "Collapse details" : "Expand details"}
+              <button
+                onClick={() => setExpanded(!expanded)}
+                aria-expanded={expanded}
+                aria-label={expanded ? "Collapse details" : "Expand details"}
+                className={cn(
+                  "h-7 w-7 rounded-lg flex items-center justify-center text-muted-foreground shrink-0",
+                  "hover:bg-muted hover:text-foreground transition-all duration-200 cursor-pointer",
+                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                )}
+              >
+                <ChevronDown
                   className={cn(
-                    "h-7 w-7 rounded-lg flex items-center justify-center text-muted-foreground shrink-0",
-                    "hover:bg-muted hover:text-foreground transition-all duration-200 cursor-pointer",
-                    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    "h-4 w-4 transition-transform duration-200",
+                    expanded && "rotate-180"
                   )}
-                >
-                  <ChevronDown
-                    className={cn(
-                      "h-4 w-4 transition-transform duration-200",
-                      expanded && "rotate-180"
-                    )}
-                  />
-                </button>
-              )}
+                />
+              </button>
             </div>
 
             {/* Title */}
             <h3 className="text-base font-semibold leading-snug">
               {item.title}
             </h3>
-
-            {/* Description */}
-            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-              {item.description}
-            </p>
 
             {/* Tags (always visible) */}
             {item.tags.length > 0 && (
@@ -161,20 +154,33 @@ function TimelineEntry({
             )}
 
             {/* Expandable details */}
-            {item.details.length > 0 && (
-              <div
-                className={cn(
-                  "grid transition-all duration-300 ease-in-out",
-                  expanded
-                    ? "grid-rows-[1fr] opacity-100 mt-4"
-                    : "grid-rows-[0fr] opacity-0 mt-0"
-                )}
-              >
-                <div className="overflow-hidden">
-                  <div className="pt-3 border-t border-dashed border-border">
-                    <p className="text-[11px] font-mono uppercase tracking-widest text-muted-foreground/60 mb-3">
-                      Key Highlights
+            <div
+              className={cn(
+                "grid transition-all duration-300 ease-in-out",
+                expanded
+                  ? "grid-rows-[1fr] opacity-100 mt-4"
+                  : "grid-rows-[0fr] opacity-0 mt-0"
+              )}
+            >
+              <div className="overflow-hidden">
+                <div className="pt-3 border-t border-dashed border-border">
+                  <p className="text-[11px] font-mono uppercase tracking-widest text-muted-foreground/60 mb-3">
+                    Details
+                  </p>
+                  
+                  {item.description && (
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                      {item.description}
                     </p>
+                  )}
+                  
+                  {!item.description && item.details.length === 0 && (
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                      More details coming soon.
+                    </p>
+                  )}
+
+                  {item.details.length > 0 && (
                     <ul className="space-y-2.5">
                       {item.details.map((detail, i) => (
                         <li
@@ -188,10 +194,10 @@ function TimelineEntry({
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  )}
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
@@ -201,7 +207,7 @@ function TimelineEntry({
 
 // ── Main component ──────────────────────────────────────────────────────────
 export function Experience() {
-  const [activeTab, setActiveTab] = useState<TimelineCategory>("education");
+  const [activeTab, setActiveTab] = useState<TimelineCategory>("experience");
   const [animating, setAnimating] = useState(true);
   const { ref, isInView } = useInView(0.1);
   const tabListRef = useRef<HTMLDivElement>(null);
@@ -424,7 +430,7 @@ export function Experience() {
             <div>
               {items.map((item, index) => (
                 <TimelineEntry
-                  key={`${activeTab}-${item.title}`}
+                  key={`${activeTab}-${index}-${item.title}`}
                   item={item}
                   index={index}
                   isLast={index === items.length - 1}
