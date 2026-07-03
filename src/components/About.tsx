@@ -16,9 +16,9 @@ import { cn } from "@/utils/cn";
 
 // ── Quick stats ─────────────────────────────────────────────────────────────
 const stats = [
-  { label: "Years Experience", value: "6+", icon: <Briefcase className="h-4 w-4" /> },
-  { label: "Projects Delivered", value: "40+", icon: <Layers className="h-4 w-4" /> },
-  { label: "Open Source PRs", value: "120+", icon: <GitPullRequest className="h-4 w-4" /> },
+  { label: "Years Experience", value: "1+", icon: <Briefcase className="h-4 w-4" /> },
+  { label: "Projects Delivered", value: "25+", icon: <Layers className="h-4 w-4" /> },
+  { label: "Open Source Projects", value: "10+", icon: <GitPullRequest className="h-4 w-4" /> },
   { label: "Cups of Coffee", value: "∞", icon: <Coffee className="h-4 w-4" /> },
 ];
 
@@ -188,8 +188,6 @@ export function About() {
                   "Next.js",
                   "Vue.js",
                   "Docker",
-                  "PostgreSQL",
-                  "AWS",
                 ].map((tech) => (
                   <Badge
                     key={tech}
